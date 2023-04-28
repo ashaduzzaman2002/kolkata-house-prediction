@@ -40,16 +40,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This project aims to create a secure and unbiased system to predict the prices of houses based on a model using the random forest regression algorithm.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Uses :
+* The system can be used to make informed investments and sales in real estate
+* It can help individuals to look for homes according to their requirements
+* It is easy to use and does not require any third party interruption
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
-Use the `BLANK_README.md` to get started.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,9 +96,21 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+House price prediction can be used for a variety of purposes, including:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+* Real estate investment: Investors can use house price prediction to identify undervalued properties that have the potential to increase in value over time. They can also use it to forecast future rental income and estimate potential returns on investment.
+
+* Real estate sales: Real estate agents can use house price prediction to advise clients on pricing strategies and set realistic expectations for selling their properties.
+
+* Home buying: Potential homebuyers can use house price prediction to determine the fair market value of a property they are interested in purchasing, and to make informed decisions about whether or not to make an offer.
+
+* Property insurance: Insurance companies can use house price prediction to estimate the replacement cost of a property, which can help them determine the appropriate amount of insurance coverage needed.
+
+* Property taxation: Governments can use house price prediction to determine property values for tax assessment purposes.
+
+* Risk management: Banks and other financial institutions can use house price prediction to assess the risk of mortgage defaults and other loan defaults related to property ownership.
+
+* Urban planning: City planners can use house price prediction to forecast demand for housing and to make informed decisions about land use and zoning regulations.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,7 +157,7 @@ Don't forget to give the project a star! Thanks again!
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
+* [Dataset Used](https://www.kaggle.com/datasets)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
