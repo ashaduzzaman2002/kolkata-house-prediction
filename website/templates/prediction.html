@@ -82,7 +82,16 @@
 
         <div class="text-center text-light mt-5 result">
           <h3 >Predicted price is:</h3>
-          <p>₹ 500043</p>
+          {% if result  %}
+            <p>₹ {{result}}</p>
+            {% else %}
+            <div class="spinner-border text-warning" role="status">
+              <span class="sr-only"></span>
+            </div>
+          {% endif %}
+
+          
+          
         </div>
         
         <div class="back-btn text-light">

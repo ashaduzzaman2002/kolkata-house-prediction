@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from utils.helper import getLocationList, yesNoParameters
+from model import PricePredictor
 
 app = Flask(__name__)
 
@@ -17,7 +18,6 @@ def prediction():
     if request.method == 'POST':
 
         key_list = yesNoParameters()
-        area = request.form.get('24X7Security')
         data = {
             'Location': request.form.get('location'),
             'No. of Bedrooms': int(request.form.get('bhk')),
@@ -27,8 +27,11 @@ def prediction():
         
         for key in key_list:
             data[key] = int(request.form.get(key))
-        return data
-        # return render_template('prediction.html')
+
+        predictor = PricePredictor()
+        predicted_price = predictor.predictPrice(data)
+        # return data
+        return render_template('prediction.html', result = predicted_price)
     else:
         return redirect('/')
 

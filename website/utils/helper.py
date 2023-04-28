@@ -3,7 +3,7 @@ import os
 
 
 current_dir = os.getcwd()
-parent_dir = os.path.abspath(os.path.join(current_dir, '../'))
+parent_dir = os.path.abspath(os.path.join(current_dir))
 # parent_dir = os.path.abspath(os.path.join(current_dir))
 file_path = os.path.join(parent_dir, "Kolkata.csv")
 
