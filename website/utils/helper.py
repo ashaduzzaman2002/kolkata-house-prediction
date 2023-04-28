@@ -25,9 +25,6 @@ def yesNoParameters():
         csv_reader = csv.DictReader(csv_file)
         header_row = next(csv_reader)
         for column_name in header_row.keys():
-            if(column_name!='Price' and column_name != 'Area' and column_name != 'No. of Bedrooms' and column_name != 'Location'):
+            if(column_name!='Price' and column_name != 'Area' and column_name != 'No. of Bedrooms' and column_name != 'Location' and column_name != 'BED'):
                 yesNoParameter_list.append(column_name)
     return sorted(list(set(yesNoParameter_list)))
-
-
-

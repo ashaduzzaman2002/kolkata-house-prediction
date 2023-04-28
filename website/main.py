@@ -20,17 +20,15 @@ def prediction():
         area = request.form.get('24X7Security')
         data = {
             'Location': request.form.get('location'),
-            'bhk': int(request.form.get('bhk')),
-            'bathrooms': int(request.form.get('bathrooms')),
-            'Area': int(request.form.get('area')),
+            'No. of Bedrooms': int(request.form.get('bhk')),
+            'BED': int(request.form.get('bed')),
+            'Area': float(request.form.get('area')),
         }
         
         for key in key_list:
-            if key == '24X7Security':
-                data['Security'] = int(request.form.get(key))
-            else:
-                data[key] = int(request.form.get(key))
-        return render_template('prediction.html')
+            data[key] = int(request.form.get(key))
+        return data
+        # return render_template('prediction.html')
     else:
         return redirect('/')
 
