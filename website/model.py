@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import LabelEncoder
+from utils.helper import yesNoParameter_list
 
 import os
 
@@ -10,11 +11,19 @@ import os
 current_dir = os.getcwd()
 parent_dir = os.path.abspath(os.path.join(current_dir))
 file_path = os.path.join(parent_dir, "Kolkata.csv")
+ranking_df_file = os.path.join(parent_dir, 'ranking.csv')
 
 df = pd.read_csv(file_path)
+ranking_df = pd.read_csv(ranking_df_file)
 
-le = LabelEncoder()
-df["Location"] = le.fit_transform(df["Location"])
+for parameter in yesNoParameter_list:
+    df[parameter] = df[parameter].astype(int)
+
+location_list = []
+for location in ranking_df['Location']:
+    location_list.append(location)
+
+df['Location'] = df['Location'].map(lambda x: location_list.index(x))
 
 X = df.drop("Price", axis=1)
 y = df["Price"]
@@ -74,7 +83,8 @@ class PricePredictor:
             'Wardrobe': data['Wardrobe'],
             'Refrigerator': data['Refrigerator'],
         }
-        inputs["Location"] = le.transform([inputs["Location"]])[0]
+
+        inputs["Location"] = location_list.index(inputs["Location"])
         X_input = pd.DataFrame([inputs])
         y_pred = model.predict(X_input)
-        return format(round(y_pred[0]))
+        return format(round(y_pred[0], 2))
