@@ -6,6 +6,7 @@
     An awesome Machine learning project !
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Demo »</strong></a>
+</div>
 
 
 
